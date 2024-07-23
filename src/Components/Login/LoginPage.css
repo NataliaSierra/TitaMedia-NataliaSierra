@@ -1,0 +1,31 @@
+.loginpage__main_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 2px solid blue;
+
+  .loginpage__main_container_img_TitaMediaLogo {
+    width: 150px;
+    border-radius: 50%;
+  }
+
+  .loginpage__main_container__title {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .loginpage__main_container__title {
+      font-size: 25px;
+    }
+
+    .loginpage__main_container__subtitle {
+      font-size: 14px;
+    }
+  }
+
+}
+
+
+
