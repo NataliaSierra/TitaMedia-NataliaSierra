@@ -23,7 +23,6 @@ export const LoginPage = () => {
       <GoogleLogin
         onSuccess={(credentialResponse) => {
           const details = jwtDecode(credentialResponse.credential);
-          console.log('🚀🚀🚀  > > > > LoginPage > > > > details:', details);
           setUserDataFromGoogleLogin(details)
           navigate('/home');
         }}

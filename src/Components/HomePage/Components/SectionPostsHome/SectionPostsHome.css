@@ -1,0 +1,33 @@
+.homePage__main_container__container_posts {
+  padding: 2rem 0;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.mian_conatiner__card_home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 1280px;
+}
+
+.container__dropdown_tags_select {
+  display: flex;
+  gap: 1rem;
+}
+
+.card__home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  min-height: 300px;
+  border-radius: 10px;
+}
