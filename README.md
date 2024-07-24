@@ -21,6 +21,7 @@ La aplicación permite a los usuarios interactuar y explorar el contenido de una
 - [Documentación Adicional](#documentación-adicional)
 - [Comandos](#comandos)
 - [Contribuidores](#contribuidores)
+- [Depliegue](#despliegue)
 - [Demo](#demo)
 
 ## Requisitos Previos
@@ -71,6 +72,8 @@ npm run dev
 ## Contribuidores
 Natalia Sierra Salamando
 
+## Despliegue
+La herramienta que utiliza este proyecto para el despliegue es CloudFlare pages en su plan "Workers Free" el cuál cuenta con hasta 100k peticiones por día gratuitamente, para conocer más [Visita CloudFlare](https://www.cloudflare.com/plans/developer-platform-pricing/)
 
 ## Demo
 
@@ -105,6 +108,7 @@ The application allows users to interact with and explore content in an intuitiv
 - [Additional Documentation](#additional-documentation)
 - [Commands](#commands)
 - [Contributors](#contributors)
+- [Deploy](#deploy)
 - [Demo](#demo)
 
 ## Prerequisites
@@ -154,6 +158,9 @@ npm run dev
 
 ## Contributors
 Natalia Sierra Salamando
+
+## Deploy
+The tool used by this project for deployment is CloudFlare Pages under its "Workers Free" plan, which includes up to 100k requests per day for free. To learn more, [Visit CloudFlare](https://www.cloudflare.com/plans/developer-platform-pricing/)
 
 ## Demo
 
