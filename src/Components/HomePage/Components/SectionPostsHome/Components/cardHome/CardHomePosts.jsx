@@ -9,30 +9,10 @@ import { ApiContext } from '../../../../../../Context/API/ApiContext';
 import { ModalCommentsCardHome } from '../ModalCommentsCardHome/ModalCommentsCardHome';
 import { ModalOwnerCardHome } from '../ModalOwnerCardHome/ModalOwnerCardHome';
 
-const ItemShape = PropTypes.shape({
-  id: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  likes: PropTypes.number.isRequired,
-  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
-  text: PropTypes.string.isRequired,
-  publishDate: PropTypes.string.isRequired,
-  owner: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    firstName: PropTypes.string.isRequired,
-    lastName: PropTypes.string.isRequired,
-    picture: PropTypes.string.isRequired
-  }).isRequired
-});
-
-
 export const CardHomePosts = ({ dataPost }) => {
-    console.log('🚀🚀🚀  > > > > CardHomePosts > > > > dataPost:', dataPost);
 
     const {currentIdPost, setCurrentIdPost } = useContext(ApiContext);
-    console.log('🚀🚀🚀  > > > > CardHomePosts > > > > currentIdPost:', currentIdPost);
     const [currentPostData, setCurrentPostData] = useState({});
-    console.log('🚀🚀🚀  > > > > CardHomePosts > > > > currentPostData:', currentPostData);
 
     const [openCloseModalComments, setOpenCloseModalComments] = useState(false);
     const [openCloseModalOwner, setOpenCloseModalOwner] = useState(false);
@@ -133,6 +113,22 @@ export const CardHomePosts = ({ dataPost }) => {
     </>
   )
 }
+
+const ItemShape = PropTypes.shape({
+  id: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  likes: PropTypes.number.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  text: PropTypes.string.isRequired,
+  publishDate: PropTypes.string.isRequired,
+  owner: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired
+  }).isRequired
+});
 
 CardHomePosts.propTypes = {
   dataPost: ItemShape.isRequired
