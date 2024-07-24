@@ -1,7 +1,7 @@
 #root {
   width: 100%;
   min-height: 100vh;
-  background-color: #1a1a1a;
+  background-image: linear-gradient(to right bottom, #000000, #17040d, #210919, #2a0b25, #300e35, #300f3b, #2e1141, #2c1347, #291142, #25103d, #220e39, #1f0c34);
 }
 
 * {

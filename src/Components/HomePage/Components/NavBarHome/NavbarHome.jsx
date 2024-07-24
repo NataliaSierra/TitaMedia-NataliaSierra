@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthUserContext } from "../../../../Context/AuthUserContext";
+import logoutIcon from "../../../../assets/img/icons/logout-icon.svg"
 import "./NavbarHome.css"
 
 export const NavbarHome = () => {
@@ -26,7 +27,7 @@ export const NavbarHome = () => {
         setUserDataFromGoogleLogin(null);
         window.location('/');
       }}>
-        Logout
+        <img src={logoutIcon} alt="" />
       </button>
     </nav>
   )
