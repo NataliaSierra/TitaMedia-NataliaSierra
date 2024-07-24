@@ -1,18 +1,22 @@
+import { useContext } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import './App.css'
 import { ProtectedAplicationRoutes } from "./Router/ProtectedAplicationRoutes";
 import { LoginPage } from "./Components/Login/LoginPage";
+import { HomePage } from "./Components/HomePage/HomePage";
+import { AuthUserContext } from "./Context/AuthUserContext";
+import './App.css'
 
 function App() {
 
-  const isAuth= false;
+  const { userDataFromGoogleLogin } = useContext(AuthUserContext);
+  console.log('🚀🚀🚀  > > > > App > > > > userDataFromGoogleLogin:', userDataFromGoogleLogin);
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={isAuth ? <h1>HOME APLICATION</h1> : <LoginPage /> }/>
+        <Route path="/" element={userDataFromGoogleLogin?.jti ? <HomePage /> : <LoginPage /> }/>
         <Route element={<ProtectedAplicationRoutes /> }>
-          <Route path="/home" element={<h1>HELLO HOME</h1>}/>
+          <Route path="/home" element={<HomePage />}/>
         </Route>
       </Routes>
     </BrowserRouter>
