@@ -1,10 +1,15 @@
+import { useContext } from 'react'
 import { Navigate, Outlet } from 'react-router-dom';
+import { AuthUserContext } from '../Context/AuthUserContext';
 
 export const ProtectedAplicationRoutes = () => {
 
-      const IsUserAuth = false
+  const { userDataFromGoogleLogin } = useContext(AuthUserContext);
+  console.log('🚀🚀🚀  > > > > ProtectedAplicationRoutes > > > > userDataFromGoogleLogin:', userDataFromGoogleLogin);
 
-    if (!IsUserAuth) {
+    const IsUserAuthValid = userDataFromGoogleLogin?.jti;
+
+    if (!IsUserAuthValid) {
       return <Navigate to="/"/>
     }
 

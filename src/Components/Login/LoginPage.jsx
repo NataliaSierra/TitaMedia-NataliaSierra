@@ -1,14 +1,17 @@
+import { useContext } from 'react';
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from 'react-router-dom';
 import TitaMediaLogo from "../../assets/img/TITA_MEDIA_LOGO.png"
 import LogoGitHub from "../../assets/img/GITHUB_LOGO.png"
 import LinkedInLogo from "../../assets/img/LINKEDIN_LOGO.webp"
+import { AuthUserContext } from '../../Context/AuthUserContext';
 import "./LoginPage.css"
 
 export const LoginPage = () => {
-
   const navigate = useNavigate();
+
+  const { setUserDataFromGoogleLogin } = useContext(AuthUserContext);
 
   return (
     <div className='loginpage__main_container'>
@@ -21,6 +24,7 @@ export const LoginPage = () => {
         onSuccess={(credentialResponse) => {
           const details = jwtDecode(credentialResponse.credential);
           console.log('🚀🚀🚀  > > > > LoginPage > > > > details:', details);
+          setUserDataFromGoogleLogin(details)
           navigate('/home');
         }}
         onError={() => {
