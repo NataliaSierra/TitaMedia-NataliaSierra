@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import "./ModalCommentsCardHome.css"
-import UseGetComments from '../../../../../../CsutomHooks/UseGetComments';
+import UseGetComments from '../../../../../../CustomHooks/UseGetComments';
 import commentsDots from '../../../../../../assets/img/icons/comment-dots.svg'
 
 export const ModalCommentsCardHome = ({ idCurrentPost, setClose }) => {

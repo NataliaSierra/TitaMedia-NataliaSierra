@@ -1,8 +1,8 @@
 // import { useState } from 'react'
 
 import { useState } from 'react';
-import UseGetAllposts from '../../CsutomHooks/UseGetAllposts';
-import UseGetAllTags from '../../CsutomHooks/UseGetAllTags';
+import UseGetAllposts from '../../CustomHooks/UseGetAllposts';
+import UseGetAllTags from '../../CustomHooks/UseGetAllTags';
 import { ApiContext } from './ApiContext'
 import PropTypes from 'prop-types';
 
