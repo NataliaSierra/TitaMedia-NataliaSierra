@@ -9,7 +9,6 @@ import './App.css'
 function App() {
 
   const { userDataFromGoogleLogin } = useContext(AuthUserContext);
-  console.log('🚀🚀🚀  > > > > App > > > > userDataFromGoogleLogin:', userDataFromGoogleLogin);
 
   return (
     <BrowserRouter>

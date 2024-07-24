@@ -10,9 +10,7 @@ export const ApiContextProvider = ({ children }) => {
   const [currentIdPost, setCurrentIdPost] = useState(null)
 
   const allPosts = UseGetAllposts();
-  console.log('🚀🚀🚀  > > > > ApiContextProvider > > > > allPosts:', allPosts);
   const tags = UseGetAllTags();
-  console.log('🚀🚀🚀  > > > > ApiContextProvider > > > > tags:', tags);
 
   return (
     <ApiContext.Provider value={{ allPosts, currentIdPost, setCurrentIdPost, tags }}>

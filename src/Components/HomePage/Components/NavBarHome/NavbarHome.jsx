@@ -1,15 +1,25 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthUserContext } from "../../../../Context/AuthUserContext";
+import { useNavigate } from 'react-router-dom';
 import logoutIcon from "../../../../assets/img/icons/logout-icon.svg"
 import "./NavbarHome.css"
 
 export const NavbarHome = () => {
+  const navigate = useNavigate();
+  const [imgProfile, setimgProfile] = useState("")
+
   const { userDataFromGoogleLogin, setUserDataFromGoogleLogin } = useContext(AuthUserContext);
-  console.log('🚀🚀🚀  > > > > HomePage > > > > userDataFromGoogleLogin:', userDataFromGoogleLogin);
+  
+  useEffect(() => {
+    if (userDataFromGoogleLogin){
+      setimgProfile(userDataFromGoogleLogin?.picture)
+    }
+  }, [userDataFromGoogleLogin])
+
 
   return (
     <nav className="homePage__main_container__navbar">
-    <img src={userDataFromGoogleLogin.picture || ""} alt={userDataFromGoogleLogin.given_name || ""} />
+    <img src={imgProfile} alt={userDataFromGoogleLogin?.given_name} />
       <ul>
         <li>
           <a href="#sectionposts">
@@ -25,7 +35,7 @@ export const NavbarHome = () => {
       <button className="homePage__main_container__navbar__button_logout"
       onClick={() => {
         setUserDataFromGoogleLogin(null);
-        window.location('/');
+        navigate('/');
       }}>
         <img src={logoutIcon} alt="" />
       </button>
