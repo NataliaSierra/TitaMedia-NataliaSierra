@@ -21,7 +21,7 @@ La aplicación permite a los usuarios interactuar y explorar el contenido de una
 - [Documentación Adicional](#documentación-adicional)
 - [Comandos](#comandos)
 - [Contribuidores](#contribuidores)
-- [Depliegue](#despliegue)
+- [Despliegue](#despliegue)
 - [Demo](#demo)
 
 ## Requisitos Previos
